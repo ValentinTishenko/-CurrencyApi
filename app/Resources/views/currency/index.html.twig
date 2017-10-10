@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                    {% for arr in matrix %}
+                        <th>
+                            {{ arr[0] }}
+                        </th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                {% for arr in matrix %}
+                    <tr class="text-center">
+                        {% for rate in arr %}
+                            <td>{{ rate }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
